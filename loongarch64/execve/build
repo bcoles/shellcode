@@ -1,0 +1,6 @@
+#!/bin/sh
+PATH="/home/user/Desktop/musl-cross/loongarch64-unknown-linux-musl/bin/:$PATH"
+loongarch64-unknown-linux-musl-as execve.s -o execve.o && \
+loongarch64-unknown-linux-musl-ld -O2 execve.o -o execve --nostdlib --static && \
+loongarch64-unknown-linux-musl-objdump -d execve
+

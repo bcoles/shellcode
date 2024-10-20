@@ -1,0 +1,6 @@
+#!/bin/sh
+PATH="/home/user/Desktop/musl-cross/loongarch64-unknown-linux-musl/bin/:$PATH"
+loongarch64-unknown-linux-musl-as cmd.s -o cmd.o && \
+loongarch64-unknown-linux-musl-ld -O2 cmd.o -o cmd --nostdlib --static && \
+loongarch64-unknown-linux-musl-objdump -d cmd
+

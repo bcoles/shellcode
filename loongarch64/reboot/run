@@ -1,0 +1,3 @@
+#!/bin/sh
+PATH="/home/user/qemu/build/:$PATH"
+qemu-loongarch64 -strace ./reboot

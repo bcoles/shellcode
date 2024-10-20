@@ -1,0 +1,6 @@
+#!/bin/sh
+PATH="/home/user/Desktop/musl-cross/loongarch64-unknown-linux-musl/bin/:$PATH"
+loongarch64-unknown-linux-musl-as reboot.s -o reboot.o && \
+loongarch64-unknown-linux-musl-ld -O2 reboot.o -o reboot --nostdlib --static && \
+loongarch64-unknown-linux-musl-objdump -d reboot
+
