@@ -1,0 +1,6 @@
+#!/bin/sh
+PATH="/home/user/Desktop/musl-cross/riscv32-linux-musl-cross/bin/:$PATH"
+riscv32-linux-musl-as reboot.s -o reboot.o && \
+riscv32-linux-musl-ld -O2 reboot.o -o reboot --nostdlib --static && \
+riscv32-linux-musl-objdump -d reboot
+

@@ -1,0 +1,6 @@
+#!/bin/sh
+PATH="/home/user/Desktop/musl-cross/riscv32-linux-musl-cross/bin/:$PATH"
+riscv32-linux-musl-as chmod.s -o chmod.o && \
+riscv32-linux-musl-ld chmod.o -o chmod --nostdlib --static && \
+riscv32-linux-musl-objdump -x chmod
+
