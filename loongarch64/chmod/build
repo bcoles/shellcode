@@ -1,0 +1,6 @@
+#!/bin/sh
+PATH="/home/user/Desktop/musl-cross/loongarch64-unknown-linux-musl/bin/:$PATH"
+loongarch64-unknown-linux-musl-as chmod.s -o chmod.o && \
+loongarch64-unknown-linux-musl-ld -O2 chmod.o -o chmod --nostdlib --static && \
+loongarch64-unknown-linux-musl-objdump -d chmod
+
