@@ -1,0 +1,6 @@
+#!/bin/sh
+PATH="/home/user/Desktop/musl-cross/aarch64-linux-musl-cross/bin/:$PATH"
+aarch64-linux-musl-as chmod.s -o chmod.o && \
+aarch64-linux-musl-ld -O0 chmod.o -o chmod --nostdlib --static && \
+aarch64-linux-musl-objdump -d chmod
+
