@@ -1,0 +1,6 @@
+#!/bin/sh
+PATH="/home/user/Desktop/musl-cross/arm-unknown-linux-musleabi/bin/:$PATH"
+arm-unknown-linux-musleabi-as chmod.s -o chmod.o && \
+arm-unknown-linux-musleabi-ld -O0 chmod.o -o chmod --nostdlib --static && \
+arm-unknown-linux-musleabi-objdump -d chmod
+
