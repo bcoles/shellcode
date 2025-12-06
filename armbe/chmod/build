@@ -1,0 +1,6 @@
+#!/bin/sh
+PATH="/home/user/Desktop/musl-cross/armeb-linux-musleabi-cross/bin:$PATH"
+armeb-linux-musleabi-as chmod.s -o chmod.o && \
+armeb-linux-musleabi-ld -O0 chmod.o -o chmod --nostdlib --static && \
+armeb-linux-musleabi-objdump -d chmod
+
